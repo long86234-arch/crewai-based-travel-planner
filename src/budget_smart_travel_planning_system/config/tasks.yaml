@@ -71,6 +71,7 @@ create_final_comprehensive_travel_plan:
     cultural guide with insider recommendations, dynamic travel toolkit with budget
     management systems, and post-travel value optimization tips
   markdown: true
+  output_file: itinerary.md
   agent: travel_plan_consolidator
   context:
   - research_destination_information
