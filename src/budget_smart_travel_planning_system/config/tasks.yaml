@@ -70,6 +70,7 @@ create_final_comprehensive_travel_plan:
     booking and preparation manual with priority timelines, local intelligence and
     cultural guide with insider recommendations, dynamic travel toolkit with budget
     management systems, and post-travel value optimization tips
+  markdown: true
   agent: travel_plan_consolidator
   context:
   - research_destination_information

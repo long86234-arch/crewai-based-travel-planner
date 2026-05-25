@@ -249,7 +249,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             role="Crew Manager",
             goal="Coordinate specialized travel planning agents to produce the most feasible, optimized, and budget-consistent travel plan.",
             backstory="You are an expert travel operations coordinator responsible for managing multiple specialist teams. You analyze user requirements, delegate subtasks intelligently, resolve inconsistencies, and ensure all outputs are cohesive, realistic, and financially optimized.",
-            llm=LLM(
+            mamager_llm=LLM(
                     model="openrouter/openai/gpt-oss-120b:free"
                 ),
             allow_delegation=True,
