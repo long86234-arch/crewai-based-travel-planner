@@ -265,7 +265,9 @@ class BudgetSmartTravelPlanningSystemCrew:
             manager_agent=manager_agent,
 
 
-            chat_llm=LLM(model="gemini/gemini-2.5-flash"),
+            chat_llm=LLM(
+                    model="openrouter/openai/gpt-oss-120b:free"
+                ),
         )
 
 
