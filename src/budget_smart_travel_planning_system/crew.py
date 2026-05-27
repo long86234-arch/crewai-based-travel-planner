@@ -235,7 +235,7 @@ class BudgetSmartTravelPlanningSystemCrew:
         return Task(
             config=self.tasks_config["create_final_comprehensive_travel_plan"],
             markdown=True,
-            
+            output_file= "C:/Users/Admin/Documents/budget_smart_travel_planning_system_v1_crewai-project - Copy/src/budget_smart_travel_planning_system/itinerary.md"
             
         )
     
