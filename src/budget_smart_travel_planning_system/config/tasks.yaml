@@ -1,44 +1,53 @@
 ---
 research_destination_information:
   description: "Conduct comprehensive research on {destination} to gather essential
-    travel information including:\n- Top attractions and must-visit places\n- Local
-    transportation options and costs  \n- Weather patterns and best time to visit\n-
-    Cultural insights and local customs\n- Safety considerations and travel requirements\n-
-    Local cuisine and dining recommendations\n- Budget estimates for activities and
-    experiences"
+    travel information that aligns with {preferences}, including:\n- Top attractions
+    and must-visit places matching user preferences\n- Local transportation options
+    and costs suited to travel style\n- Weather patterns and best time to visit based
+    on preferences  \n- Cultural insights and local customs relevant to interests\n-
+    Safety considerations and travel requirements\n- Local cuisine and dining recommendations
+    matching dietary/budget preferences\n- Budget estimates for activities and experiences
+    aligned with spending preferences"
   expected_output: A detailed research report containing all essential information
-    about {destination} including attractions, transportation, weather, culture, safety,
-    dining, and budget considerations in a well-structured format
+    about {destination} tailored to {preferences}, including preference-aligned attractions,
+    transportation suitable for travel style, weather considerations for preferred
+    activities, cultural insights matching interests, safety info, dining recommendations
+    suited to preferences, and budget considerations reflecting spending style
   agent: travel_research_specialist
 research_flight_options:
   description: Research flight options for {destination} from {departure_location}
-    on {travel_dates} using a resilient multi-layer approach with focus on {preferences}.
-    Use multiple search engines, advanced scraping tools, and provide comprehensive
-    flight analysis with pricing trends, airline comparisons, and booking recommendations.
-  expected_output: A comprehensive flight analysis report including top 5 flight options
-    with detailed comparison (price, duration, stops, airlines), price trend analysis,
-    alternative airport options, flexible date options, total cost breakdown, airline
-    reliability ratings, and specific booking recommendations
+    on {travel_dates} with primary focus on {preferences}. Use resilient multi-layer
+    approach to find flights that match user's specific preferences for budget, comfort,
+    timing, airlines, and travel style. Use multiple search engines, advanced scraping
+    tools, and provide comprehensive flight analysis prioritizing user preferences.
+  expected_output: A comprehensive flight analysis report featuring top 5 flight options
+    that best match {preferences}, with detailed comparison focusing on preference-relevant
+    factors (price vs comfort based on user priorities), preference-aligned booking
+    recommendations, alternative options respecting user constraints, and total cost
+    breakdown with preference-based value analysis
   agent: flight_search_specialist
 find_accommodation_options:
-  description: Research accommodation options for {destination} within {budget} using
-    systematic multi-tool approach. Identify top booking platforms, use advanced scraping
-    to bypass anti-bot protections, and provide comprehensive accommodation analysis
-    across different types and price ranges.
-  expected_output: A curated list of 5-7 accommodation recommendations with detailed
-    information about each option including pros/cons, pricing, location advantages,
-    amenities, and booking links
+  description: Research accommodation options for {destination} within {budget} that
+    perfectly match {preferences}. Use systematic multi-tool approach to identify
+    accommodations that align with user's style, comfort level, location preferences,
+    and amenities priorities. Provide comprehensive analysis across different types
+    and price ranges while respecting user preferences.
+  expected_output: A curated list of 5-7 accommodation recommendations that perfectly
+    align with {preferences}, featuring detailed preference-based analysis for each
+    option including how well they match user's style/comfort/location/amenity preferences,
+    preference-justified pricing, location advantages relevant to user interests,
+    and booking recommendations tailored to user priorities
   agent: accommodation_expert
   context:
   - research_destination_information
   - research_flight_options
 create_comprehensive_travel_itinerary:
   description: Synthesize all specialist research to design a comprehensive {duration}-day
-    travel itinerary for {destination} focusing on experience optimization and logistics
-    flow. Incorporate destination research, accommodation data, and flight logistics
+    travel itinerary for {destination} that perfectly reflects {preferences} in every activity,
+    timing, and recommendation. Incorporate destination research, accommodation data, and flight logistics
     into cohesive daily schedules with cultural integration and realistic timing.
-  expected_output: A comprehensive day-by-day travel itinerary featuring integrated
-    research summary, strategic daily schedules with optimized activity sequencing,
+  expected_output: A comprehensive day-by-day travel itinerary that perfectly reflects {preferences}
+    featuring integrated research summary, strategic daily schedules with optimized activity sequencing,
     experience enhancement features with cultural tips, practical implementation guide
     with booking priorities, and authentic local integration with insider tips
   agent: strategic_itinerary_planner
@@ -49,29 +58,31 @@ create_comprehensive_travel_itinerary:
 validate_and_optimize_travel_budget:
   description: Conduct comprehensive budget validation and optimization analysis for
     the travel itinerary within {budget}, ensuring mathematical accuracy and maximum
-    value delivery. Perform mandatory budget validation, strategic budget allocation
-    analysis, cost optimization, and financial risk management.
-  expected_output: A comprehensive budget validation and optimization report featuring
-    budget compliance certification with mathematical verification, strategic optimization
-    analysis with 80/20 value recommendations, financial implementation strategy with
-    daily budget limits, risk management and contingency planning, and money-saving
-    intelligence with local cost-saving tips
+    value delivery while respecting {preferences}. Perform budget validation with
+    preference-aligned spending priorities, strategic budget allocation matching user's
+    value preferences, cost optimization respecting user priorities, and financial
+    risk management suited to user's risk tolerance.
+  expected_output: A comprehensive budget validation and optimization report that
+    respects {preferences} throughout, featuring preference-aligned budget compliance
+    certification, strategic optimization analysis reflecting user's value priorities,
+    financial implementation strategy matching spending preferences, risk management
+    suited to user's risk tolerance, and money-saving intelligence aligned with user
+    preferences and priorities
   agent: budget_auditor
   context:
   - create_comprehensive_travel_itinerary
 create_final_comprehensive_travel_plan:
   description: Consolidate all specialist research and analysis into the definitive,
-    comprehensive travel plan for {destination} that serves as the traveler's complete
-    guide from booking through return. Perform rigorous financial, temporal, geographic,
-    and consistency validation across all elements.
-  expected_output: The definitive travel plan document serving as the traveler's comprehensive
-    guide, featuring executive travel dashboard with trip snapshot and budget command
-    center, complete day-by-day implementation guide with detailed schedules, master
-    booking and preparation manual with priority timelines, local intelligence and
-    cultural guide with insider recommendations, dynamic travel toolkit with budget
-    management systems, and post-travel value optimization tips
-  markdown: true
-  output_file: itinerary.md
+    comprehensive travel plan for {destination} that perfectly reflects {preferences}
+    throughout every section and recommendation. Perform rigorous validation while
+    ensuring the final guide serves as a preference-aligned travel companion that
+    matches user's style, interests, pace, and priorities from booking through return.
+  expected_output: The definitive travel plan document that perfectly reflects {preferences}
+    in every section, serving as the traveler's preference-aligned comprehensive guide.
+    Features executive dashboard reflecting user priorities, day-by-day guide matching
+    user pace and interests, booking manual aligned with user preferences, local intelligence
+    suited to user interests, dynamic toolkit respecting user style, and optimization
+    tips matching user values and preferences
   agent: travel_plan_consolidator
   context:
   - research_destination_information
