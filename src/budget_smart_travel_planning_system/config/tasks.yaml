@@ -82,7 +82,7 @@ create_final_comprehensive_travel_plan:
     Features executive dashboard reflecting user priorities, day-by-day guide matching
     user pace and interests, booking manual aligned with user preferences, local intelligence
     suited to user interests, dynamic toolkit respecting user style, and optimization
-    tips matching user values and preferences
+    tips matching user values and preferences. IMPORTANT: The final answer MUST be optimized for chat readability.
   agent: travel_plan_consolidator
   context:
   - research_destination_information
