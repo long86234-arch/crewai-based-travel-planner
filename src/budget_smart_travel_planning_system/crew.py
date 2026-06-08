@@ -268,7 +268,6 @@ class BudgetSmartTravelPlanningSystemCrew:
             tasks=self.tasks,  # Automatically created by the @task decorator
             process=Process.hierarchical,
             verbose=True,
-            memory=True,
 
 
             manager_agent=manager_agent,
