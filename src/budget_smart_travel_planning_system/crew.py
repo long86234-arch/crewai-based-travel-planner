@@ -26,7 +26,12 @@ class BudgetSmartTravelPlanningSystemCrew:
     def travel_research_specialist(self) -> Agent:
         return Agent(
             config=self.agents_config["travel_research_specialist"],
-            tools=[SerperDevTool()],
+            tools=[
+                SerperDevTool(),
+                SerpApiGoogleSearchTool(),
+                FirecrawlScrapeWebsiteTool(),
+                JinaScrapeWebsiteTool()
+                ],
             reasoning=False,
             max_reasoning_attempts=None,
             inject_date=True,
@@ -44,6 +49,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             # ĐÃ SỬA: Gỡ StagehandTool khỏi đây để tránh lỗi asyncio.run()
             tools=[
 				SerpApiGoogleSearchTool(),
+                ScrapeWebsiteTool(),
 				FirecrawlScrapeWebsiteTool(),
 				BrowserbaseLoadTool(),
 				SerperDevTool(),
@@ -68,6 +74,9 @@ class BudgetSmartTravelPlanningSystemCrew:
 				ScrapeWebsiteTool(),
 				FirecrawlScrapeWebsiteTool(),
 				SerpApiGoogleSearchTool(),
+                SerperDevTool(),
+                BrowserbaseLoadTool(),
+				SerplyWebSearchTool(),
 				JinaScrapeWebsiteTool()
 			],
             reasoning=False,
