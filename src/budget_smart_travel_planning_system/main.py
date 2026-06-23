@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys
+import asyncio
 from budget_smart_travel_planning_system.crew import BudgetSmartTravelPlanningSystemCrew
 
 # This main file is intended to be a way for your to run your
@@ -7,7 +8,7 @@ from budget_smart_travel_planning_system.crew import BudgetSmartTravelPlanningSy
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
-def run():
+async def run():
     """
     Run the crew.
     """
@@ -26,7 +27,7 @@ def run():
         'travel_dates': travel_dates,
         'preferences': preferences
     }
-    BudgetSmartTravelPlanningSystemCrew().crew().kickoff(inputs=inputs)
+    return await BudgetSmartTravelPlanningSystemCrew().crew().kickoff_async(inputs=inputs)
 
 
 def train():
@@ -82,7 +83,7 @@ if __name__ == "__main__":
 
     command = sys.argv[1]
     if command == "run":
-        run()
+        asyncio.run(run())
     elif command == "train":
         train()
     elif command == "replay":
