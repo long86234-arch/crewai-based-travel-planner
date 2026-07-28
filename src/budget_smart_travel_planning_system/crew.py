@@ -39,7 +39,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             max_iter=25,
             max_rpm=None,
             max_execution_time=None,
-            llm=LLM(model="openrouter/openai/gpt-oss-120b:free"),
+            llm=LLM(model="openrouter/openai/gpt-oss-20b:free"),
         )
         
     @agent
@@ -63,7 +63,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             max_iter=25,
             max_rpm=None,
             max_execution_time=None,
-            llm=LLM(model="openrouter/openai/gpt-oss-120b:free"),
+            llm=LLM(model="openrouter/openai/gpt-oss-20b:free"),
         )
         
     @agent
@@ -86,7 +86,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             max_iter=25,
             max_rpm=None,
             max_execution_time=None,
-            llm=LLM(model="openrouter/openai/gpt-oss-120b:free"),
+            llm=LLM(model="openrouter/openai/gpt-oss-20b:free"),
         )
         
     @agent
@@ -102,7 +102,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             max_rpm=None,
             max_execution_time=None,
             llm=LLM(
-                    model="openrouter/openai/gpt-oss-120b:free",
+                    model="openrouter/openai/gpt-oss-20b:free",
                     temperature=1.0,
                     reasoning_effort="medium"
                 ),
@@ -121,7 +121,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             max_rpm=None,
             max_execution_time=None,
             llm=LLM(
-                    model="openrouter/openai/gpt-oss-120b:free",
+                    model="openrouter/openai/gpt-oss-20b:free",
                     temperature=1.0,
                     reasoning_effort="medium"
                 ),
@@ -140,7 +140,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             max_rpm=None,
             max_execution_time=None,
             llm=LLM(
-                    model="openrouter/openai/gpt-oss-120b:free",
+                    model="openrouter/openai/gpt-oss-20b:free",
                     temperature=1.0,
                     reasoning_effort="medium"
                 ),
@@ -199,7 +199,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             goal="Coordinate specialized travel planning agents to produce the most feasible, optimized, and budget-consistent travel plan.",
             backstory="You are an expert travel operations coordinator responsible for managing multiple specialist teams. You analyze user requirements, delegate subtasks intelligently, resolve inconsistencies, and ensure all outputs are cohesive, realistic, and financially optimized.",
             llm=LLM(
-                    model="openrouter/openai/gpt-oss-120b:free",
+                    model="openrouter/openai/gpt-oss-20b:free",
                     temperature=1.0,
                     reasoning_effort="high"
                 ),
@@ -213,7 +213,7 @@ class BudgetSmartTravelPlanningSystemCrew:
             verbose=True,
             manager_agent=manager_agent,
             chat_llm=LLM(
-                    model="openrouter/openai/gpt-oss-120b:free",
+                    model="openrouter/openai/gpt-oss-20b:free",
                     temperature=1.0,
                     reasoning_effort="high"
                 ),
